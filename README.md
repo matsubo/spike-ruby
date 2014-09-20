@@ -1,6 +1,7 @@
-# Spike::Ruby
+# spike-ruby
 
-TODO: Write a gem description
+[SPIKE](https://spike.cc/) API Client for Ruby.
+
 
 ## Installation
 
@@ -20,7 +21,30 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Create charge
+
+```ruby
+  require 'spike'
+
+  spike = Spike.new(spike_secret_apie_key)
+
+  request_params = {
+    amount: 1000,
+    currency: "JPY",
+    card: token_from_checkout
+  }
+  products = [{
+    title: "item title",
+    description: "item description",
+    price: 1000,
+    stock: 10,
+    count: 1,
+    currency: "JPY",
+    id: "00001"
+  }]
+
+  spike.charge.create(request_parmas, products)
+```
 
 ## Contributing
 
