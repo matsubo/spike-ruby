@@ -1,3 +1,4 @@
+require 'spike/version'
 require 'spike/charge'
 require 'spike/error'
 

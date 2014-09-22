@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'spike/ruby/version'
+require 'spike/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "spike-ruby"
-  spec.version       = Spike::Ruby::VERSION
+  spec.version       = Spike::VERSION
   spec.authors       = ["AKAMATSU Yuki"]
   spec.email         = ["y.akamatsu@ukstudio.jp"]
   spec.summary       = %q{Ruby library for SPIKE API}
