@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["y.akamatsu@ukstudio.jp"]
   spec.summary       = %q{Ruby library for SPIKE API}
   spec.description   = %q{Ruby library for SPIKE API}
-  spec.homepage      = "http://spice-life/spike-ruby"
+  spec.homepage      = "http://github.com/spice-life/spike-ruby"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
