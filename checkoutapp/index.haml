@@ -1,0 +1,27 @@
+!!!
+
+%html
+  %body
+    %button#customButton submit
+
+    %script{type: 'text/javascript', src: 'https://checkout.spike.cc/v1/checkout.js'}
+
+    :javascript
+      var handler = SpikeCheckout.configure({
+        key: "#{@public_key}",
+        token: function(token, args) {
+          console.log(token.id);
+        }
+      });
+
+
+      document.getElementById("customButton").addEventListener("click", function(e) {
+        handler.open({
+          name: "Sample app for get token",
+          amount: 900,
+          currency: "JPY",
+          guest: true,
+          email: "foo@example.com"
+        });
+        e.preventDefault();
+      });

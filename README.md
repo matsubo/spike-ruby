@@ -46,6 +46,15 @@ Or install it yourself as:
   spike.charge.create(request_parmas, products)
 ```
 
+## Get credit card token
+
+```shell
+$ gem install sinatra
+$ SPIKE_PUBLIC_KEY=pk_xxxxxxx ruby checkoutapp.rb
+```
+
+Access to http://localhost:4567
+
 ## Contributing
 
 1. Fork it ( https://github.com/spice-life/spike-ruby/fork )
