@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sk_test_Lkg0iMrN5x02S7e4WVE5FgTj:@api.spike.cc/v1/charges
+    body:
+      encoding: UTF-8
+      string: https://api.spike.cc/v1/charges&amount=900&currency=JPY&card=tok_rNUiMLP32pYQkpe2PqYAUuHK&products=%5B%7B%22title%22%3A%22%E5%95%86%E5%93%81%22%2C%22description%22%3A%22%E5%95%86%E5%93%81%E8%AA%AC%E6%98%8E%22%2C%22language%22%3A%22JA%22%2C%22price%22%3A900%2C%22currency%22%3A%22JPY%22%2C%22count%22%3A1%2C%22id%22%3A%2200001%22%2C%22stock%22%3A10%7D%5D
+    headers: {}
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 07 Oct 2014 11:39:05 GMT
+      Etag:
+      - '"20f59ea808e5712eb3dcf1378658c6c6"'
+      Server:
+      - nginx
+      Status:
+      - 201 Created
+      X-Request-Id:
+      - ebc65445-26b6-439d-a0db-f84b2013dec0
+      X-Runtime:
+      - '0.249048'
+      Content-Length:
+      - '392'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"20141007-113905-mj7atv4rkg","object":"charge","created":1412681945,"livemode":false,"paid":true,"amount":"900.0","currency":"JPY","refunded":false,"card":{},"captured":true,"refunds":[],"balance_transaction":"","failure_message":null,"failure_code":null,"amount_refunded":null,"customer":null,"invoice":null,"description":null,"dispute":null,"metadata":{},"statement_description":null}'
+    http_version: 
+  recorded_at: Tue, 07 Oct 2014 11:39:05 GMT
+recorded_with: VCR 2.9.3

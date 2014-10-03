@@ -35,7 +35,7 @@ class Spike
   def handle_response(curl)
     case curl.status.to_i
     when 400
-      raise Spike::BadRequestError
+      raise Spike::BadRequestError, JSON.parse(curl.body_str)['error']['message']
     when 401
       raise Spike::UnauthorizedError
     when 402
