@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sk_test_Lkg0iMrN5x02S7e4WVE5FgTj:@api.spike.cc/v1/charges/20141007-113905-mj7atv4rkg
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 07 Oct 2014 12:10:04 GMT
+      Etag:
+      - '"20f59ea808e5712eb3dcf1378658c6c6"'
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      X-Request-Id:
+      - b1783930-6a6a-4b04-8f1a-6132e74bb014
+      X-Runtime:
+      - '0.024541'
+      Content-Length:
+      - '392'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"20141007-113905-mj7atv4rkg","object":"charge","created":1412681945,"livemode":false,"paid":true,"amount":"900.0","currency":"JPY","refunded":false,"card":{},"captured":true,"refunds":[],"balance_transaction":"","failure_message":null,"failure_code":null,"amount_refunded":null,"customer":null,"invoice":null,"description":null,"dispute":null,"metadata":{},"statement_description":null}'
+    http_version: 
+  recorded_at: Tue, 07 Oct 2014 12:10:04 GMT
+recorded_with: VCR 2.9.3

@@ -11,6 +11,11 @@ class Spike
       Spike::Charge::Response.new(res)
     end
 
+    def retrieve(charge_id)
+      res = @client.get(request_path: "/charges/#{charge_id}")
+      Spike::Charge::Response.new(res)
+    end
+
     class Spike::Charge::Response
       def initialize(hash)
         @attributes = Hash[hash.map{|k,v| [k.to_s, v] }]

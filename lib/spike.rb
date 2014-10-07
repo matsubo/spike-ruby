@@ -15,13 +15,19 @@ class Spike
     Spike::Charge.new(self)
   end
 
+  def get(request_path:)
+    c = build_curl(request_path)
+    basic_auth(c)
+
+    c.http_get
+
+    handle_response(c)
+    JSON.parse(c.body_str)
+  end
+
   def post(request_path:, request_params:)
-    c = Curl::Easy.new
-    c.url = API_URL + request_path
-    c.http_auth_types = :basic
-    c.username = @secret_token
-    c.password = ''
-    c.verbose = true
+    c = build_curl(request_path)
+    basic_auth(c)
 
     curb_post_fields = request_params.map {|k,v| Curl::PostField.content(k,v)}
     c.http_post(c.url, *curb_post_fields)
@@ -31,6 +37,18 @@ class Spike
   end
 
   private
+  def build_curl(request_path)
+    c = Curl::Easy.new
+    c.url = API_URL + request_path
+    c.verbose = true
+    c
+  end
+
+  def basic_auth(curl)
+    curl.http_auth_types = :basic
+    curl.username = @secret_token
+    curl.password = ''
+  end
 
   def handle_response(curl)
     case curl.status.to_i
