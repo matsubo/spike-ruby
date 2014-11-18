@@ -26,7 +26,7 @@ Or install it yourself as:
 ```ruby
   require 'spike'
 
-  spike = Spike.new(spike_secret_apie_key)
+  spike = Spike.new(spike_secret_api_key)
 
   request_params = {
     amount: 1000,
@@ -43,7 +43,7 @@ Or install it yourself as:
     id: "00001"
   }]
 
-  spike.charge.create(request_parmas, products)
+  spike.charge.create(request_params, products)
 ```
 
 ## Get credit card token
