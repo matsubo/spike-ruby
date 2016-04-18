@@ -1,8 +1,10 @@
 require 'spike/version'
-require 'spike/charge'
 require 'spike/error'
+require 'spike/object'
+require 'curb'
 
 class Spike
+
   API_BASE = 'https://api.spike.cc'
   API_VERSION = '/v1'
   API_URL = API_BASE+API_VERSION
@@ -12,11 +14,19 @@ class Spike
   end
 
   def charge
+    require 'spike/charge'
     Spike::Charge.new(self)
   end
 
-  def get(request_path:)
-    c = build_curl(request_path)
+  def token
+    require 'spike/token'
+    Spike::Token.new(self)
+  end
+
+  def get(request_path:, request_params: {})
+    require 'active_support/core_ext/object/to_query'
+
+    c = build_curl(request_path + '?' + request_params.to_query)
     basic_auth(c)
 
     c.http_get

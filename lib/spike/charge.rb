@@ -7,7 +7,7 @@ class Spike
     end
 
     def create(params, products)
-      res = @client.post(request_path: "/charges", request_params: params.merge(products: JSON.generate(products)))
+      res = @client.post(request_path: '/charges', request_params: params.merge(products: JSON.generate(products)))
       Spike::Charge::Response.new(res)
     end
 
