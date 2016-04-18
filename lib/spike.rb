@@ -67,6 +67,8 @@ class Spike
       raise Spike::UnauthorizedError
     when 402
       raise Spike::RequestFailedError
+    when 402
+      raise Spike::NotFoundError
     when 500
       raise Spike::ApiServerError
     end

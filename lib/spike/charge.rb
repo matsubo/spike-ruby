@@ -16,11 +16,33 @@ class Spike
       Spike::Charge::Response.new(res)
     end
 
-    class Spike::Charge::Response
-      def initialize(hash)
-        @attributes = Hash[hash.map{|k,v| [k.to_s, v] }]
+    def list(params = {})
+      res = @client.get(request_path: "/charges", request_params: params)
+      Spike::Charge::List.new(res)
+    end
+
+
+    class Spike::Charge::List < Spike::Object
+
+      def object
+        @attributes['object']
       end
 
+      def url
+        @attributes['url']
+      end
+
+      def has_more?
+        @attributes['has_more']
+      end
+
+      def data
+        @attributes['data'].collect { |d| Spike::Charge::Response.new(d) }
+      end
+
+    end
+
+    class Spike::Charge::Response < Spike::Object
       def id
         @attributes['id']
       end
