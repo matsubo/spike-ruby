@@ -40,7 +40,6 @@ class Spike
   def build_curl(request_path)
     c = Curl::Easy.new
     c.url = API_URL + request_path
-    c.verbose = true
     c
   end
 
