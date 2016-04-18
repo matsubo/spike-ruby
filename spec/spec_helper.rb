@@ -2,7 +2,10 @@ require 'bundler'
 Bundler.require(:default, :development)
 
 require 'simplecov'
-SimpleCov.start
+SimpleCov.adapters.define 'spike' do
+    add_filter '/spec/'
+end
+SimpleCov.start 'spike'
 
 require 'spike'
 
