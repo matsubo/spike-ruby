@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://invalid_secret_key:@api.spike.cc/v1/charges
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 18 Apr 2016 10:23:21 GMT
+      Server:
+      - nginx
+      Status:
+      - 401 Unauthorized
+      X-Request-Id:
+      - 62b776d0-b1a2-4b1f-9801-858273eb8b47
+      X-Runtime:
+      - '0.012375'
+      Content-Length:
+      - '309'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJlcnJvciI6eyJ0eXBlIjoiYXV0aGVudGljYXRpb25fZXJyb3IiLCJjb2Rl
+        IjoiaW52YWxpZF9hcGlfa2V5IiwibWVzc2FnZSI6IkFQSeOCreODvOOBjOmW
+        k+mBleOBo+OBpuOBhOOBvuOBmeOAgkF1dGhvcml6YXRpb27jg5jjg4Pjg4Dj
+        gavmraPjgZfjgYRBUEnjgq3jg7zjgpLoqK3lrprjgZfjgabjgY/jgaDjgZXj
+        gYTjgILoqbPntLDjga/jgZPjgaHjgonvvJpodHRwczovc3Bpa2UuY2MvZG9j
+        cy9hcGkjYXV0aGVudGljYXRpb27jgILjgYrllY/jgYTlkIjjgo/jgZvjga/j
+        gZPjgaHjgonvvJpodHRwczovL3N1cHBvcnQuc3Bpa2UuY2MvIn19
+    http_version: 
+  recorded_at: Mon, 18 Apr 2016 10:23:21 GMT
+recorded_with: VCR 3.0.1

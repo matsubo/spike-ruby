@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sk_test_IFWHL5kDDZFV72KtPyBp0leO:@api.spike.cc/v1/tokens
+    body:
+      encoding: UTF-8
+      string: https://api.spike.cc/v1/tokens&card%5Bnumber%5D=4444333322221111&card%5Bexp_month%5D=3&card%5Bexp_year%5D=2017&card%5Bcvc%5D=111&card%5Bname%5D=TARO%20SPIKE&currency=JPY&email=foo%40example.com
+    headers: {}
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 18 Apr 2016 09:25:07 GMT
+      Etag:
+      - W/"aa125d2b5d270900fea5b74acb4c403e"
+      Server:
+      - nginx
+      Status:
+      - 201 Created
+      X-Request-Id:
+      - ac7fff78-0ea3-45a2-97d0-849104879401
+      X-Runtime:
+      - '0.135450'
+      Content-Length:
+      - '230'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"tok_yDSyDoL0l18IrNiPfdMmc9cm","object":"token","created":1460971507,"livemode":false,"type":"card","currency":"JPY","source":{"object":"card","last4":"1111","brand":"Visa","exp_month":3,"exp_year":2017,"name":"TARO
+        SPIKE"}}'
+    http_version: 
+  recorded_at: Mon, 18 Apr 2016 09:25:07 GMT
+recorded_with: VCR 3.0.1

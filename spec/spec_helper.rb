@@ -1,6 +1,9 @@
 require 'bundler'
 Bundler.require(:default, :development)
 
+require 'simplecov'
+SimpleCov.start
+
 require 'spike'
 
 VCR.configure do |c|

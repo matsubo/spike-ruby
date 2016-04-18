@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://sk_test_Lkg0iMrN5x02S7e4WVE5FgTj:@api.spike.cc/v1/charges/20141007-113905-mj7atv4rkg
+    uri: https://sk_test_IFWHL5kDDZFV72KtPyBp0leO:@api.spike.cc/v1/charges/20160418-100308-ywci76
     body:
       encoding: US-ASCII
       string: ''
@@ -17,24 +17,24 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 07 Oct 2014 12:10:04 GMT
+      - Mon, 18 Apr 2016 10:05:03 GMT
       Etag:
-      - '"20f59ea808e5712eb3dcf1378658c6c6"'
+      - W/"c8a6570043e3b3e8f69172d9a8b0258f"
       Server:
       - nginx
       Status:
       - 200 OK
       X-Request-Id:
-      - b1783930-6a6a-4b04-8f1a-6132e74bb014
+      - 9bd57151-eb8a-49eb-800a-2168a970554f
       X-Runtime:
-      - '0.024541'
+      - '0.061840'
       Content-Length:
-      - '392'
+      - '399'
       Connection:
       - keep-alive
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"20141007-113905-mj7atv4rkg","object":"charge","created":1412681945,"livemode":false,"paid":true,"amount":"900.0","currency":"JPY","refunded":false,"card":{},"captured":true,"refunds":[],"balance_transaction":"","failure_message":null,"failure_code":null,"amount_refunded":null,"customer":null,"invoice":null,"description":null,"dispute":null,"metadata":{},"statement_description":null}'
+      string: '{"id":"20160418-100308-ywci76","object":"charge","created":1460973788,"livemode":false,"paid":true,"amount":900,"currency":"JPY","refunded":false,"source":{},"captured":true,"refunds":[],"amount_refunded":null,"authenticated":false,"attempt_authenticated":false,"authenticated_at":null,"authorization":null,"customer":null,"description":null,"dispute":null,"metadata":{},"statement_descriptor":null}'
     http_version: 
-  recorded_at: Tue, 07 Oct 2014 12:10:04 GMT
-recorded_with: VCR 2.9.3
+  recorded_at: Mon, 18 Apr 2016 10:05:03 GMT
+recorded_with: VCR 3.0.1

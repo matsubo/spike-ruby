@@ -16,17 +16,10 @@ class Spike
       Spike::Token::Response.new(res)
     end
 
-    class Spike::Token::Response
-      def initialize(hash)
-        @attributes = Hash[hash.map { |k, v| [k.to_s, v] }]
-      end
+    class Spike::Token::Response < Spike::Object
 
       def id
         @attributes['id']
-      end
-
-      def object
-        @attributes['object']
       end
 
       def live_mode?

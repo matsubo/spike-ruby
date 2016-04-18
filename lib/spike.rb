@@ -1,6 +1,8 @@
 require 'spike/version'
 require 'spike/error'
 require 'spike/object'
+require 'spike/charge'
+require 'spike/token'
 require 'curb'
 
 class Spike
@@ -14,12 +16,10 @@ class Spike
   end
 
   def charge
-    require 'spike/charge'
     Spike::Charge.new(self)
   end
 
   def token
-    require 'spike/token'
     Spike::Token.new(self)
   end
 
@@ -67,7 +67,7 @@ class Spike
       raise Spike::UnauthorizedError
     when 402
       raise Spike::RequestFailedError
-    when 402
+    when 404
       raise Spike::NotFoundError
     when 500
       raise Spike::ApiServerError
