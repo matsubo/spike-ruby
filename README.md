@@ -38,6 +38,7 @@ Or install it yourself as:
     description: "item description",
     price: 1000,
     stock: 10,
+    language: "JA",
     count: 1,
     currency: "JPY",
     id: "00001"

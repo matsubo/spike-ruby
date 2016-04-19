@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sk_test_IFWHL5kDDZFV72KtPyBp0leO:@api.spike.cc/v1/charges
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 18 Apr 2016 10:05:03 GMT
+      Etag:
+      - W/"6d1ecf337b776f7f29c099bdc8b9967a"
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      X-Request-Id:
+      - 47b01401-5ac7-46ec-832b-07bcda0d9b4f
+      X-Runtime:
+      - '0.164772'
+      Content-Length:
+      - '4068'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"object":"list","url":"/v1/charges","has_more":true,"data":[{"id":"20160418-100308-ywci76","object":"charge","created":1460973788,"livemode":false,"paid":true,"amount":900,"currency":"JPY","refunded":false,"source":{},"captured":true,"refunds":[],"amount_refunded":null,"authenticated":false,"attempt_authenticated":false,"authenticated_at":null,"authorization":null,"customer":null,"description":null,"dispute":null,"metadata":{},"statement_descriptor":null},{"id":"20160418-100241-7ah6uj","object":"charge","created":1460973761,"livemode":false,"paid":true,"amount":900,"currency":"JPY","refunded":false,"source":{},"captured":true,"refunds":[],"amount_refunded":null,"authenticated":false,"attempt_authenticated":false,"authenticated_at":null,"authorization":null,"customer":null,"description":null,"dispute":null,"metadata":{},"statement_descriptor":null},{"id":"20160418-100007-eu2x1q","object":"charge","created":1460973607,"livemode":false,"paid":true,"amount":900,"currency":"JPY","refunded":false,"source":{},"captured":true,"refunds":[],"amount_refunded":null,"authenticated":false,"attempt_authenticated":false,"authenticated_at":null,"authorization":null,"customer":null,"description":null,"dispute":null,"metadata":{},"statement_descriptor":null},{"id":"20160418-095712-74gn68","object":"charge","created":1460973432,"livemode":false,"paid":true,"amount":900,"currency":"JPY","refunded":false,"source":{},"captured":true,"refunds":[],"amount_refunded":null,"authenticated":false,"attempt_authenticated":false,"authenticated_at":null,"authorization":null,"customer":null,"description":null,"dispute":null,"metadata":{},"statement_descriptor":null},{"id":"20160418-095609-d5ncmp","object":"charge","created":1460973369,"livemode":false,"paid":true,"amount":1000,"currency":"JPY","refunded":false,"source":{},"captured":true,"refunds":[],"amount_refunded":null,"authenticated":false,"attempt_authenticated":false,"authenticated_at":null,"authorization":null,"customer":null,"description":null,"dispute":null,"metadata":{},"statement_descriptor":null},{"id":"20160418-095533-xo1ve3","object":"charge","created":1460973333,"livemode":false,"paid":true,"amount":1000,"currency":"JPY","refunded":false,"source":{},"captured":true,"refunds":[],"amount_refunded":null,"authenticated":false,"attempt_authenticated":false,"authenticated_at":null,"authorization":null,"customer":null,"description":null,"dispute":null,"metadata":{},"statement_descriptor":null},{"id":"20160418-085949-3w45yj","object":"charge","created":1460969989,"livemode":false,"paid":true,"amount":1000,"currency":"JPY","refunded":false,"source":{},"captured":true,"refunds":[],"amount_refunded":null,"authenticated":false,"attempt_authenticated":false,"authenticated_at":null,"authorization":null,"customer":null,"description":null,"dispute":null,"metadata":{},"statement_descriptor":null},{"id":"20160418-085302-v0n1fz","object":"charge","created":1460969582,"livemode":false,"paid":true,"amount":1000,"currency":"JPY","refunded":false,"source":{},"captured":true,"refunds":[],"amount_refunded":null,"authenticated":false,"attempt_authenticated":false,"authenticated_at":null,"authorization":null,"customer":null,"description":null,"dispute":null,"metadata":{},"statement_descriptor":null},{"id":"20160418-083539-x4b7rg","object":"charge","created":1460968539,"livemode":false,"paid":true,"amount":1000,"currency":"JPY","refunded":false,"source":{},"captured":true,"refunds":[],"amount_refunded":null,"authenticated":false,"attempt_authenticated":false,"authenticated_at":null,"authorization":null,"customer":null,"description":null,"dispute":null,"metadata":{},"statement_descriptor":null},{"id":"20160418-083516-89f1s5","object":"charge","created":1460968516,"livemode":false,"paid":true,"amount":1000,"currency":"JPY","refunded":false,"source":{},"captured":true,"refunds":[],"amount_refunded":null,"authenticated":false,"attempt_authenticated":false,"authenticated_at":null,"authorization":null,"customer":null,"description":null,"dispute":null,"metadata":{},"statement_descriptor":null}]}'
+    http_version: 
+  recorded_at: Mon, 18 Apr 2016 10:05:03 GMT
+recorded_with: VCR 3.0.1
