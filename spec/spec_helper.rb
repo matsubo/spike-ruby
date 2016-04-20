@@ -10,7 +10,7 @@ SimpleCov.formatters = [
   SimpleCov::Formatter::HTMLFormatter
 ]
 
-SimpleCov.adapters.define 'spike' do
+SimpleCov.profiles.define 'spike' do
   add_filter '/spec/'
 end
 SimpleCov.start 'spike'
