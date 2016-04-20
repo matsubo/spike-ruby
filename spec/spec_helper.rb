@@ -7,7 +7,7 @@ if ENV['CIRCLE_ARTIFACTS']
 end
 
 SimpleCov.formatters = [
-  SimpleCov::Formatter::HTMLFormatter,
+  SimpleCov::Formatter::HTMLFormatter
 ]
 
 SimpleCov.adapters.define 'spike' do
