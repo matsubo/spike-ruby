@@ -9,7 +9,6 @@ require 'curb'
 # Main class
 #
 class Spike
-
   API_BASE = 'https://api.spike.cc'.freeze
   API_VERSION = '/v1'.freeze
   API_URL = API_BASE + API_VERSION
@@ -78,4 +77,3 @@ class Spike
     end
   end
 end
-
