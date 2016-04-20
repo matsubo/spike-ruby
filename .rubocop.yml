@@ -9,7 +9,7 @@ LineLength:
   Max: 120
 ClassAndModuleChildren:
   EnforcedStyle: compact
-Style/MethodLength:
+Metrics/MethodLength:
   Max: 20
 Style/PredicateName:
   Enabled: false
