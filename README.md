@@ -1,4 +1,4 @@
-# spike-ruby ![build status](https://circleci.com/gh/spice-life/spike-ruby.png?style=shield&circle-token=793417d2dc17daaef4dfba6afb6552e4ca4c1023)
+# spike-ruby ![build status](https://circleci.com/gh/matsubo/spike-ruby.png?style=shield&circle-token=7f07d86695915d7a1d34ca37491c3825b5eea2c4)
 
 [SPIKE](https://spike.cc/) API Client for Ruby.
 
