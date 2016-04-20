@@ -2,10 +2,13 @@ require 'spike/version'
 require 'spike/charge'
 require 'spike/error'
 
+#
+# Main class
+#
 class Spike
-  API_BASE = 'https://api.spike.cc'
-  API_VERSION = '/v1'
-  API_URL = API_BASE+API_VERSION
+  API_BASE = 'https://api.spike.cc'.freeze
+  API_VERSION = '/v1'.freeze
+  API_URL = API_BASE + API_VERSION
 
   def initialize(secret_token)
     @secret_token = secret_token
@@ -29,7 +32,7 @@ class Spike
     c = build_curl(request_path)
     basic_auth(c)
 
-    curb_post_fields = request_params.map {|k,v| Curl::PostField.content(k,v)}
+    curb_post_fields = request_params.map { |k, v| Curl::PostField.content(k, v) }
     c.http_post(c.url, *curb_post_fields)
 
     handle_response(c)
@@ -37,6 +40,7 @@ class Spike
   end
 
   private
+
   def build_curl(request_path)
     c = Curl::Easy.new
     c.url = API_URL + request_path

@@ -5,7 +5,20 @@ describe Spike::Charge do
 
   describe 'create new charge' do
     let(:token) { 'tok_rNUiMLP32pYQkpe2PqYAUuHK' }
-    let(:products) { [{ title: '商品', description: '商品説明', language: 'JA', price: 900, currency: 'JPY', count: 1, id: '00001', stock: 10 }] }
+    let(:products) do
+      [
+        {
+          id: '00001',
+          title: '商品',
+          description: '商品説明',
+          language: 'JA',
+          price: 900,
+          currency: 'JPY',
+          count: 1,
+          stock: 10
+        }
+      ]
+    end
     let(:request_params) { { amount: 900, currency: 'JPY', card: token } }
 
     subject do
