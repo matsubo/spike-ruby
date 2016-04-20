@@ -1,4 +1,4 @@
-# spike-ruby ![build status](https://circleci.com/gh/spice-life/spike-ruby.png?style=shield&circle-token=793417d2dc17daaef4dfba6afb6552e4ca4c1023)
+# spike-ruby ![build status](https://circleci.com/gh/spice-life/spike-ruby.png?style=shield&circle-token=793417d2dc17daaef4dfba6afb6552e4ca4c1023) [![Code Climate](https://codeclimate.com/github/matsubo/spike-ruby/badges/gpa.svg)](https://codeclimate.com/github/matsubo/spike-ruby) [![Test Coverage](https://codeclimate.com/github/matsubo/spike-ruby/badges/coverage.svg)](https://codeclimate.com/github/matsubo/spike-ruby/coverage) [![Issue Count](https://codeclimate.com/github/matsubo/spike-ruby/badges/issue_count.svg)](https://codeclimate.com/github/matsubo/spike-ruby)
 
 [SPIKE](https://spike.cc/) API Client for Ruby.
 

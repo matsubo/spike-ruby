@@ -5,7 +5,7 @@ describe Spike::Charge do
 
   describe 'create new charge' do
     let(:token) { 'tok_rNUiMLP32pYQkpe2PqYAUuHK' }
-    let(:products) { [{title: '商品', description: '商品説明', language: 'JA', price: 900, currency: 'JPY', count: 1, id: '00001', stock: 10}]}
+    let(:products) { [{ title: '商品', description: '商品説明', language: 'JA', price: 900, currency: 'JPY', count: 1, id: '00001', stock: 10 }] }
     let(:request_params) { { amount: 900, currency: 'JPY', card: token } }
 
     subject do
@@ -31,7 +31,7 @@ describe Spike::Charge do
     subject do
       res = nil
       VCR.use_cassette 'lib/spike_get_charge' do
-        res = Spike.new(secret_api_key).charge.retrieve("20141007-113905-mj7atv4rkg")
+        res = Spike.new(secret_api_key).charge.retrieve('20141007-113905-mj7atv4rkg')
       end
     end
 

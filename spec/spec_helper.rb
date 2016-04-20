@@ -1,6 +1,9 @@
 require 'bundler'
 Bundler.require(:default, :development)
 
+require 'codeclimate-test-reporter'
+CodeClimate::TestReporter.start
+
 require 'spike'
 
 VCR.configure do |c|
@@ -10,5 +13,5 @@ VCR.configure do |c|
 end
 
 RSpec.configure do |config|
-  config.order = "random"
+  config.order = 'random'
 end
