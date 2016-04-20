@@ -1,6 +1,9 @@
 require 'spike/version'
-require 'spike/charge'
 require 'spike/error'
+require 'spike/object'
+require 'spike/charge'
+require 'spike/token'
+require 'curb'
 
 #
 # Main class
@@ -18,8 +21,14 @@ class Spike
     Spike::Charge.new(self)
   end
 
-  def get(request_path:)
-    c = build_curl(request_path)
+  def token
+    Spike::Token.new(self)
+  end
+
+  def get(request_path:, request_params: {})
+    require 'active_support/core_ext/object/to_query'
+
+    c = build_curl(request_path + '?' + request_params.to_query)
     basic_auth(c)
 
     c.http_get
@@ -44,7 +53,6 @@ class Spike
   def build_curl(request_path)
     c = Curl::Easy.new
     c.url = API_URL + request_path
-    c.verbose = true
     c
   end
 
@@ -62,6 +70,8 @@ class Spike
       raise Spike::UnauthorizedError
     when 402
       raise Spike::RequestFailedError
+    when 404
+      raise Spike::NotFoundError
     when 500
       raise Spike::ApiServerError
     end

@@ -30,4 +30,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rubocop'
 
   spec.add_dependency 'curb', '~> 0.8.6'
+  spec.add_dependency 'activesupport', '>=3.0.0'
 end

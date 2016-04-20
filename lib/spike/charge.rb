@@ -17,6 +17,32 @@ class Spike::Charge
     Response.new(res)
   end
 
+  def list(params = {})
+    res = @client.get(request_path: '/charges', request_params: params)
+    Spike::Charge::List.new(res)
+  end
+
+  #
+  # List object
+  #
+  class List < Spike::Object
+    def object
+      @attributes['object']
+    end
+
+    def url
+      @attributes['url']
+    end
+
+    def has_more?
+      @attributes['has_more']
+    end
+
+    def data
+      @attributes['data'].collect { |d| Spike::Charge::Response.new(d) }
+    end
+  end
+
   #
   # Charge object
   #
