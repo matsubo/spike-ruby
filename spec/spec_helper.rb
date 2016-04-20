@@ -8,7 +8,6 @@ end
 
 SimpleCov.formatters = [
   SimpleCov::Formatter::HTMLFormatter,
-  SimpleCov::Formatter::RcovFormatter
 ]
 
 SimpleCov.adapters.define 'spike' do
