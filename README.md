@@ -1,4 +1,4 @@
-# spike-ruby ![build status](https://circleci.com/gh/matsubo/spike-ruby.png?style=shield&circle-token=7f07d86695915d7a1d34ca37491c3825b5eea2c4) 
+# spike-ruby [![Gem Version](https://badge.fury.io/rb/spike-ruby.svg)](https://badge.fury.io/rb/spike-ruby) ![build status](https://circleci.com/gh/matsubo/spike-ruby.png?style=shield&circle-token=7f07d86695915d7a1d34ca37491c3825b5eea2c4) 
 
 [SPIKE](https://spike.cc/) API Client for Ruby.
 
