@@ -24,27 +24,40 @@ Or install it yourself as:
 ### Example: Create charge
 
 ```ruby
-  require 'spike'
+require 'spike'
 
-  spike = Spike.new(spike_secret_api_key)
+spike = Spike.new(spike_secret_api_key)
 
-  request_params = {
-    amount: 1000,
-    currency: "JPY",
-    card: token_from_checkout
-  }
-  products = [{
-    title: "item title",
-    description: "item description",
-    price: 1000,
-    stock: 10,
-    language: "JA",
-    count: 1,
-    currency: "JPY",
-    id: "00001"
-  }]
+token_params = {
+  'card[number]' => '4444333322221111',
+  'card[exp_month]' => '3',
+  'card[exp_year]' => '2017',
+  'card[cvc]' => '111',
+  'card[name]' => 'TARO SPIKE',
+  'currency' => 'JPY',
+  'email' => 'foo@example.com'
+}
 
-  spike.charge.create(request_params, products)
+token = spike.token.create(token_params)
+
+request_params = {
+  mount: 1000,
+  currency: "JPY",
+  card: token.id
+}
+
+products = [{
+  title: "item title",
+  description: "item description",
+  price: 1000,
+  stock: 10,
+  language: "JA",
+  count: 1,
+  currency: "JPY",
+  id: "00001"
+}]
+
+spike.charge.create(request_params, products)
 ```
 
 ## Contributing
